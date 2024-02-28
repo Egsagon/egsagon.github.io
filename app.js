@@ -15,13 +15,15 @@ $('#ds').on('click', () => {
 
 $.getJSON(api, data => {
     data.forEach(repo => {
-        if (repo.id === 761968911)
-            repo.html_url = 'https://github.com/EchterAlsFake/PHUB'
-        
-        repo.stars = repo.stargazers_count ? '[' + repo.stargazers_count + '★]' : ''
+        if (repo.description) {
 
-        $('#projects').append(repl(template, repo))
-    })
+            if (repo.id === 761968911)
+                repo.html_url = 'https://github.com/EchterAlsFake/PHUB'
+            
+            repo.stars = repo.stargazers_count ? '[' + repo.stargazers_count + '★]' : ''
+
+            $('#projects').append(repl(template, repo))
+    }})
 
     clearInterval(loader)
     $('#loader').css('display', 'none')
