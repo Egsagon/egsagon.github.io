@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
+
+body {
+    background-color: #000;
+    margin: 30px;
+}
+
+* {
+    font-family: 'Roboto mono';
+    color: #fff;
+}
+
+h1 {
+    margin: 0;
+}
+
+#head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid orangered;
+}
+
+#head::after {
+    content: 'Projects';
+    font-size: small;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: orangered;
+    background-color: #000;
+    padding: 0 5px;
+    transform: translate(-10px, 50%);
+}
+
+#projects {
+    margin-top: 24px;
+    min-height: 10px;
+}
+
+#projects div {
+    display: flex;
+    align-items: center;
+}
+
+#projects a {
+    margin-right: 16px;
+    word-break: keep-all;
+}
+
+#projects p {
+    color: gray;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#projects i:empty {
+    display: none;
+}
+
+#projects i {
+    all: unset;
+    margin-right: 16px;
+    color: orangered;
+}
+
+#projects div::before {
+    content: '>';
+    margin-right: 16px;
+}
+
+#neko {
+    text-align: center;
+    margin: 24px 0;
+    color: gray;
+    animation: fly forwards infinite 1s step-start;
+}
+
+@keyframes fly {
+    0%, 100% { translate: 0 0 }
+    50% { translate: 5px 0 }
+}

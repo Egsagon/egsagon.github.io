@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Egsagon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="head">
+        <h1>Egsagon</h1>
+        <div>
+            <a href="https://github.com/Egsagon" target="_blank">Github</a>
+            <a href="#" id="ds">Discord</a>
+            <a href="mailto:egsagon.git@gmail.com">Email</a>
+        </div>
+    </div>
+    <div id="projects">
+        <template>
+            <div>
+                <a href="{{ html_url }}" target="_blank">{{ name }}</a>
+                <i>{{ stars }}</i>
+                <p>{{ description }}</p>
+            </div>
+        </template>
+    </div>
+    <div id="neko">(੭˃ᴗ˂)੭</div>
+    <div id="load"></div>
+    <script src="app.js"></script>
+</body>
+</html>
