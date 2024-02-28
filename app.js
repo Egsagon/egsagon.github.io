@@ -17,9 +17,10 @@ $.getJSON(api, data => {
     data.forEach(repo => {
         if (repo.description) {
 
-            if (repo.id === 761968911)
+            if (repo.id === 761968911) {
                 repo.html_url = 'https://github.com/EchterAlsFake/PHUB'
-            
+                repo.stargazers_count = '30+'
+            }
             repo.stars = repo.stargazers_count ? '[' + repo.stargazers_count + '★]' : ''
 
             $('#projects').append(repl(template, repo))
